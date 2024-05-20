@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteNest</title>
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href=" upload.html">Upload Notes</a>
+         
+      </nav>
+<div id="con">
+     <div id="options">
+        <button class="btns" id="bt1" onclick="readData(code+'/notes','notes')">NOTES</button>
+        <button class="btns" id="bt2" onclick="readData(code+'/qp','qp')">QUESTION PAPERS</button>
+        <button class="btns" id="bt3" onclick="readData(code+'/solve_qp','solve_qp')">SOLVED QP</button>
+        <button class="btns" id="bt4" onclick="readData(code+'/ot_notes','ot_notes')">OTHER NOTES</button>
+    </div>
+    <div id="files">
+     
+       
+    </div>
+</div>
+   
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
