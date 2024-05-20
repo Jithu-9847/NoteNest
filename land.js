@@ -41,3 +41,12 @@ function btn6() {
 
 }
 
+document.getElementById("down_btn").addEventListener("click",()=>{
+    var downloadLink = document.createElement('a');
+    downloadLink.href = 'time_table.png';  
+    downloadLink.download = 'TimeTable.png';  
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+})
+
