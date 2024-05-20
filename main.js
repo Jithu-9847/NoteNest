@@ -26,7 +26,7 @@ function createTile(tileData, type, index) {
 
   // Create button element
   var button = document.createElement('button');
-  button.textContent = "Open File";
+  button.textContent = "Download";
   button.addEventListener('click', function () {
     retrievePDF(code + "/" + type + "/" + data[index]);
 
