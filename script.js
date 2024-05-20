@@ -18,8 +18,8 @@ var t=0;
 var divWidth = document.getElementById("progress").clientWidth;
 divWidth=divWidth/100;
 
-var course_code=document.getElementById("code").value;
-var cat=document.getElementById("cat").value;
+var course_code=document.getElementById("code");
+var cat=document.getElementById("cat");
 
 
 
@@ -30,7 +30,7 @@ function uploadPDF() {
    
   document.getElementById("status").innerText="Uploading...";
 
-  const reference = storageRef.child(course_code+"/"+cat+"/"+support_doc.name);
+  const reference = storageRef.child(course_code.value+"/"+cat.value+"/"+support_doc.name);
   reference.put(support_doc).on('state_changed',
     (snapshot) => {
       // Observe state change events such as progress, pause, and resume
