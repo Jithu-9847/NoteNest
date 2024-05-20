@@ -30,6 +30,21 @@
             color: #666;
             line-height: 1.6;
         }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -57,5 +72,17 @@
         <h2>Join Us Today</h2>
         <p>Ready to take your learning to the next level? Join the NoteNest community today and start sharing, downloading, and connecting with fellow learners from around the world. Together, let's make knowledge sharing more accessible and collaborative than ever before.</p>
     </div>
+    <footer>
+        <p>Connect with me:</p>
+         
+        <p>Contact: jithugirish0@gmail.com</p>
+        <p>&copy; <span id="year"></span> Your Website. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    <script>
+        
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    
 </body>
 </html>

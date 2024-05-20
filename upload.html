@@ -13,16 +13,16 @@
     
     <h1>Welcome to the Document Sharing Page</h1>
 
-    <form>
+    <form name="form">
         <label for="document">Select the category:</label><br>
         <select name="document" id="cat">
             <option value="notes" selected>Notes</option>
             <option value="qp">Question Paper</option>
-            <option value="solve_qp">Important topics</option>
+            <option value="solve_qp">Solved QP</option>
             <option value="ot_notes">Other Notes</option>
         </select><br><br>
         <label for="document">Course Code:</label><br>
-        <select name="document" id="code">
+        <select id="code" name="code">
             <option value="CST202" selected>CST202(COA)</option>
             <option value="CST204">CST204(DBMS)</option>
             <option value="EST200">EST200(DE)</option>
@@ -48,6 +48,17 @@
         <p id="end"></p>
 
     </div>
+    <footer>
+        <p>Connect with me:</p>
+         
+        <p>Contact: jithugirish0@gmail.com</p>
+        <p>&copy; <span id="year"></span> Your Website. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    <script>
+        
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
     <script src="script.js"></script>

@@ -68,6 +68,21 @@
             /* Adjust this value as needed */
         }
 
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
         /* Gradient background */
 
         @media only screen and (max-width: 600px) {
@@ -93,7 +108,7 @@
     </div>
 
     <!-- Course Buttons -->
-    <div style="text-align: center;">
+    <div style="text-align: center; height: 70vh;">
         <button class="button" onclick="btn1()">MAT206</button>
         <button class="button" onclick="btn2()" >CST202</button>
         <button class="button" onclick="btn3()" >CST204</button>
@@ -101,6 +116,17 @@
         <button class="button" onclick="btn5()">MCN202</button>
         <button class="button" onclick="btn6()">CST206</button>
     </div>
+    <footer>
+        <p>Connect with me:</p>
+         
+        <p>Contact: jithugirish0@gmail.com</p>
+        <p>&copy; <span id="year"></span> Your Website. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    <script>
+        
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
      <script src="land.js"></script>
 </body>
 
