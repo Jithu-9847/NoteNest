@@ -11,6 +11,10 @@
     overflow-y: scroll;
     margin-bottom: 20px;
 }
+body{
+            padding:0;
+            margin:0;
+}
 
 #ms{
   width: 100%;
