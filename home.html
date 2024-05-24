@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+    <title>NoteNest</title>
+    <style>
+        /* Styling for the navigation bar */
+        /* Styling for the navigation bar */
+
+        body{
+            padding:0;
+            margin:0;
+         }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* Styling for the links inside the navigation bar */
+        .navbar a {
+
+            float: left;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Change the color of links on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        /* Styling for the active link */
+        .active {
+            background-color: #4CAF50;
+        }
+
+        /* Styling for the buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #4CAF50;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        /* Hover effect for buttons */
+        .button:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+
+        /* Click effect for buttons */
+        .button:active {
+            background-color: #3e8e41;
+            border-color: #3e8e41;
+        }
+
+        /* Styling for the button container */
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+            /* Adjust this value as needed */
+        }
+
+        footer {
+             margin-top: 60vh;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        #time {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90vw;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #f0f0f0;
+            border: 2px solid #dddddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Gradient background */
+
+        @media only screen and (max-width: 600px) {
+
+            /* Adjust styles for smaller screens */
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            #img {
+                width: 200px;
+            }
+            table{
+                 
+                font-size: 10px;
+            }
+            #time{
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="upload.html">Upload Notes</a>
+
+    </div>
+
+    <!-- Course Buttons -->
+    <div style="text-align: center; height: 30vh; margin-top: 20px;">
+        <button class="button" onclick="btn1()">MAT206</button>
+        <button class="button" onclick="btn2()">CST202</button>
+        <button class="button" onclick="btn3()">CST204</button>
+        <button class="button" onclick="btn4()">EST200</button>
+        <button class="button" onclick="btn5()">MCN202</button>
+        <button class="button" onclick="btn6()">CST206</button>
+    </div>
+    <div id="time">
+        <h2 style="font-family: Arial, Helvetica, sans-serif;margin-top: 30px;">Exam Timetable</h2>
+        <!-- <img src="time_table.png" alt="" id="img"> -->
+        <style>
+            table {
+              width: 90%;
+              border-collapse: collapse;
+              font-family: Arial, sans-serif;
+              
+            }
+          
+            th, td {
+              border: 1px solid #dddddd;
+              text-align: center;
+              padding: 8px;
+
+            }
+          
+            th {
+              background-color: #f2f2f2;
+              font-weight: bold;
+            }
+          
+            tr:nth-child(even) {
+              background-color: #f9f9f9;
+            }
+
+            #down_btn{
+                margin-top: 10px;
+            }
+          </style>
+          
+          <table id="table">
+            <tr>
+              <th>DATE</th>
+              <th>SLOT</th>
+              <th>COURSE CODE</th>
+              <th>COURSE NAME</th>
+            </tr>
+            <tr>
+              <td>24/05/2024</td>
+              <td>A</td>
+              <td>MAT206</td>
+              <td>GT</td>
+            </tr>
+            <tr>
+              <td>29/05/2024</td>
+              <td>B</td>
+              <td>CST202</td>
+              <td>COA</td>
+            </tr>
+            <tr>
+              <td>04/06/2024</td>
+              <td>C</td>
+              <td>CST204</td>
+              <td>DBMS</td>
+            </tr>
+            <tr>
+              <td>12/06/2024</td>
+              <td>E</td>
+              <td>EST200</td>
+              <td>DE</td>
+            </tr>
+            <tr>
+              <td>15/06/2024</td>
+              <td>F</td>
+              <td>MCN202</td>
+              <td>COI</td>
+            </tr>
+            <tr>
+              <td>19/06/2024</td>
+              <td>D</td>
+              <td>CST206</td>
+              <td>OS</td>
+            </tr>
+          </table>
+
+          <button id="down_btn" class="button">Download Timetable</button>
+          
+    </div>
+    <footer>
+        <p>Connect with me:</p>
+
+        <p>Contact: jithugirish0@gmail.com</p>
+        <p>&copy; <span id="year"></span> Note Nest. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    <script>
+
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script src="land.js"></script>
+</body>
+
+</html>
