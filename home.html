@@ -10,10 +10,7 @@
         /* Styling for the navigation bar */
         /* Styling for the navigation bar */
 
-        body{
-            padding:0;
-            margin:0;
-         }
+
         .navbar {
             background-color: #333;
             overflow: hidden;
@@ -75,7 +72,7 @@
         }
 
         footer {
-             margin-top: 60vh;
+            margin-top: 90vh;
             background-color: #333;
             color: #fff;
             padding: 20px 0;
@@ -92,12 +89,14 @@
             text-decoration: underline;
         }
 
+
         #time {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            margin-top: 100px;
             width: 90vw;
-            height: 50vh;
+            height: 58vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -107,6 +106,54 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+        }
+
+        #time_in {
+
+            margin-top: 60px;
+            width: 90vw;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+
+        }
+
+        #img {
+            position: absolute;
+            height: 250px;
+            transform: translate(-20px, -20px);
+        }
+
+        #img_div {
+
+            position: absolute;
+            top: 0;
+            transform: translateY(-160px);
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        #dialog_bubble {
+            z-index: 2;
+            position: absolute;
+            color: #636363;
+            width: max-content;
+            left: 80%;
+            transform: translate(10px, -35px);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #adf8b0;
+        }
+
+        #dialog {
+            margin: 15px 25px;
+            text-align: center;
+            font: 15px sans-serif;
         }
 
         /* Gradient background */
@@ -123,13 +170,57 @@
             #img {
                 width: 200px;
             }
-            table{
-                 
+
+            table {
+
                 font-size: 10px;
             }
-            #time{
-                margin-top: 20px;
+
+            #time {
+                margin-top: 150px;
+                height: 40vh;
             }
+
+            #time_in {
+                margin-top: 50px;
+
+            }
+
+            #img {
+                transform: translate(-73px, -20px);
+                height: 200px;
+            }
+
+            #img_div {
+
+                transform: translate(20px, -125px);
+            }
+
+            footer {
+                margin-top: 60vh;
+            }
+            #dialog_bubble {
+                width: 190px;
+                left: 30%;
+                transform: translate(10px, -60px);
+            }
+
+
+        }
+
+        @media only screen and (max-height: 700px) and (max-width:600px) {
+            #time {
+                margin-top: 159px;
+                height: 48vh;
+            }
+
+            footer {
+                margin-top: 83vh;
+            }
+            #dialog_bubble {
+             margin-top: 10px;
+             
+        }
         }
     </style>
 </head>
@@ -138,7 +229,7 @@
 
     <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="home.html" class="active">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="upload.html">Upload Notes</a>
 
@@ -153,96 +244,189 @@
         <button class="button" onclick="btn5()">MCN202</button>
         <button class="button" onclick="btn6()">CST206</button>
     </div>
+
+
     <div id="time">
-        <h2 style="font-family: Arial, Helvetica, sans-serif;margin-top: 30px;">Exam Timetable</h2>
-        <!-- <img src="time_table.png" alt="" id="img"> -->
-        <style>
-            table {
-              width: 90%;
-              border-collapse: collapse;
-              font-family: Arial, sans-serif;
-              
-            }
-          
-            th, td {
-              border: 1px solid #dddddd;
-              text-align: center;
-              padding: 8px;
+        <div id="time_in">
+            <div id="img_div">
+                <div id="dialog_bubble">
+                    <p id="dialog">Hello How are You</p>
+                </div>
+                <img src="" id="img">
+            </div>
 
-            }
-          
-            th {
-              background-color: #f2f2f2;
-              font-weight: bold;
-            }
-          
-            tr:nth-child(even) {
-              background-color: #f9f9f9;
-            }
+            <h2 style="font-family: Arial, Helvetica, sans-serif;margin-top: 30px;">Exam Timetable</h2>
+            <!-- <img src="time_table.png" alt="" id="img"> -->
+            <style>
+                table {
+                    width: 90%;
+                    border-collapse: collapse;
+                    font-family: Arial, sans-serif;
 
-            #down_btn{
-                margin-top: 10px;
-            }
-          </style>
-          
-          <table id="table">
-            <tr>
-              <th>DATE</th>
-              <th>SLOT</th>
-              <th>COURSE CODE</th>
-              <th>COURSE NAME</th>
-            </tr>
-            <tr>
-              <td><s>24/05/2024</s></td>
-              <td><s>A</s></td>
-              <td><s>MAT206</s></td>
-              <td><s>GT</s></td>
-            </tr>
-            <tr>
-              <td>29/05/2024</td>
-              <td>B</td>
-              <td>CST202</td>
-              <td>COA</td>
-            </tr>
-            <tr>
-              <td>04/06/2024</td>
-              <td>C</td>
-              <td>CST204</td>
-              <td>DBMS</td>
-            </tr>
-            <tr>
-              <td>12/06/2024</td>
-              <td>E</td>
-              <td>EST200</td>
-              <td>DE</td>
-            </tr>
-            <tr>
-              <td>15/06/2024</td>
-              <td>F</td>
-              <td>MCN202</td>
-              <td>COI</td>
-            </tr>
-            <tr>
-              <td>19/06/2024</td>
-              <td>D</td>
-              <td>CST206</td>
-              <td>OS</td>
-            </tr>
-          </table>
+                }
 
-          <button id="down_btn" class="button">Download Timetable</button>
-          
+                th,
+                td {
+                    border: 1px solid #dddddd;
+                    text-align: center;
+                    padding: 8px;
+
+                }
+
+                th {
+                    background-color: #f2f2f2;
+                    font-weight: bold;
+                }
+
+                tr:nth-child(even) {
+                    background-color: #f9f9f9;
+                }
+
+                #down_btn {
+                    margin-top: 10px;
+                }
+            </style>
+
+            <table id="table">
+                <tr>
+                    <th>DATE</th>
+                    <th>SLOT</th>
+                    <th>COURSE CODE</th>
+                    <th>COURSE NAME</th>
+                </tr>
+                <tr>
+                    <td>24/05/2024</td>
+                    <td>A</td>
+                    <td>MAT206</td>
+                    <td>GT</td>
+                </tr>
+                <tr>
+                    <td>29/05/2024</td>
+                    <td>B</td>
+                    <td>CST202</td>
+                    <td>COA</td>
+                </tr>
+                <tr>
+                    <td>04/06/2024</td>
+                    <td>C</td>
+                    <td>CST204</td>
+                    <td>DBMS</td>
+                </tr>
+                <tr>
+                    <td>12/06/2024</td>
+                    <td>E</td>
+                    <td>EST200</td>
+                    <td>DE</td>
+                </tr>
+                <tr>
+                    <td>15/06/2024</td>
+                    <td>F</td>
+                    <td>MCN202</td>
+                    <td>COI</td>
+                </tr>
+                <tr>
+                    <td>19/06/2024</td>
+                    <td>D</td>
+                    <td>CST206</td>
+                    <td>OS</td>
+                </tr>
+            </table>
+
+            <button id="down_btn" class="button">Download Timetable</button>
+        </div>
     </div>
     <footer>
         <p>Connect with me:</p>
 
         <p>Contact: jithugirish0@gmail.com</p>
-        <p>&copy; <span id="year"></span> Note Nest. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Your Website. All rights reserved.</p>
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
     <script>
 
         document.getElementById("year").innerHTML = new Date().getFullYear();
+
+        const image = document.getElementById("img");
+        const currentHour = 7;
+        let morning_ms = [
+                "Good Morning,Have a nice day!",
+                "Do not disturb!",
+                "Hello, Good Morning!",
+                
+            ];
+        function dialog(params) {
+            let ms = [
+                "Cool!",
+                "Do not disturb!",
+                "Hello ",
+                "---"
+            ];
+
+            if (params === 0) {
+                document.getElementById("dialog").innerText = ms[0]
+            } else if (params === 1) {
+                document.getElementById("dialog").innerText = ms[1]
+            } else if (params === 2) {
+                if (currentHour >= 5 && currentHour < 12) {
+                document.getElementById("dialog").innerText = ms[2]+"Good Morning"
+                    
+                } else if (currentHour >= 12 && currentHour < 18) {
+                document.getElementById("dialog").innerText = ms[2]+"Good Afternoon"
+                     
+
+                } else if (currentHour >= 18 && currentHour < 23) {
+                    
+                document.getElementById("dialog").innerText = ms[2]+"Good Evening"
+
+                }
+            }else{
+                document.getElementById("dialog").innerText = ms[3]
+
+            }
+        }
+
+        let morning = [
+            "workout.png",
+            "study.png",
+            "sitting.png",
+
+        ]
+
+        let noon = [
+            "listening1.png",
+            "study.png",
+            "sitting.png",
+            "sleeping.png"
+        ]
+
+        let night = [
+            "listening1.png",
+            "study.png",
+            "sitting.png",
+            "sleeping.png"
+        ]
+
+        if (currentHour >= 5 && currentHour < 12) {
+            const randomIndex = Math.floor(Math.random() * morning.length);
+            document.getElementById("img").setAttribute("src", morning[randomIndex])
+            document.getElementById("dialog").innerText =morning_ms[randomIndex]
+
+        } else if (currentHour >= 12 && currentHour < 18) {
+            const randomIndex = Math.floor(Math.random() * noon.length);
+            document.getElementById("img").setAttribute("src", noon[randomIndex])
+            dialog(randomIndex);
+
+        } else if (currentHour >= 18 && currentHour < 23) {
+            const randomIndex = Math.floor(Math.random() * night.length);
+            document.getElementById("img").setAttribute("src", night[randomIndex])
+            dialog(randomIndex);
+
+        } else {
+            document.getElementById("img").setAttribute("src", "sleeping.png")
+            document.getElementById("dialog").innerText ="---"
+
+        }
+
     </script>
     <script src="land.js"></script>
 </body>
