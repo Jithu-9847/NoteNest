@@ -299,14 +299,14 @@ html::-webkit-scrollbar {
 }
 .message-list {
   overflow-y: scroll;
-  height: 80vh;
+  height: 75vh;
   display: flex;
  
   flex-direction: column;
   border-radius: 5px 0 0 5px;
   gap: 30px;
   /* align-items: center; */
-  margin-top: 17px;
+  
 }
 .message {
   padding: 10px;
