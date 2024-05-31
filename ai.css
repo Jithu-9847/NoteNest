@@ -362,4 +362,8 @@ html::-webkit-scrollbar {
   bottom: 33px;
   right: 15vw;
 }
+  #inner_text {
+     
+    bottom: 11px;
+}
 }
