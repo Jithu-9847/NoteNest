@@ -154,6 +154,44 @@
             margin: 15px 25px;
         }
 
+        #ai {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 571px;
+            z-index: 1000;
+            width: 60px;
+            left: 95vw;
+            opacity: 0.7;
+            transition: 1s;
+        }
+
+        #ai:hover {
+            opacity: 1;
+        }
+
+        
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
         /* Gradient background */
 
         @media only screen and (max-width: 600px) {
@@ -190,14 +228,36 @@
             }
 
             #img_div {
-
-                transform: translate(20px, -125px);
+                transform: translate(-40px, -125px);
             }
 
             footer {
                 margin-top: 60vh;
             }
 
+            #ai {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 88vh;
+                z-index: 1000;
+                width: 60px;
+                left: 95vw;
+                opacity: 0.5;
+            }
+
+            #dialog_bubble {
+                z-index: 2;
+                position: absolute;
+                color: #636363;
+                width: max-content;
+                left: 80%;
+                transform: translate(-28px, -35px);
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-color: #adf8b0;
+
+            }
 
         }
 
@@ -214,7 +274,7 @@
     </style>
 </head>
 
-<body
+<body>
 
     <!-- Navigation Bar -->
     <div class="navbar">
@@ -232,7 +292,12 @@
         <button class="button" onclick="btn4()">EST200</button>
         <button class="button" onclick="btn5()">MCN202</button>
         <button class="button" onclick="btn6()">CST206</button>
+
+
+
     </div>
+
+    <a href="ai.html"><img src="chatbot.png" alt="" id="ai"></a>
 
 
     <div id="time">
@@ -324,6 +389,7 @@
             <button id="down_btn" class="button">Download Timetable</button>
         </div>
     </div>
+
     <footer>
         <p>Connect with me:</p>
 
@@ -332,20 +398,17 @@
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
     <script>
-    
-    window.onload=()=>{
-        window.location.replace("test.html")
-    }
+
         document.getElementById("year").innerHTML = new Date().getFullYear();
 
         const image = document.getElementById("img");
         const currentHour = new Date().getHours();
         let morning_ms = [
-                "Good Morning,Have nice day!",
-                "Do not disturb!",
-                "Hello Good Mori",
-                
-            ];
+            "Good Morning,Have nice day!",
+            "Do not disturb!",
+            "Hello Good Mori",
+
+        ];
         function dialog(params) {
             let ms = [
                 "Cool!",
@@ -360,18 +423,18 @@
                 document.getElementById("dialog").innerText = ms[1]
             } else if (params === 2) {
                 if (currentHour >= 5 && currentHour < 12) {
-                document.getElementById("dialog").innerText = ms[2]+"Good Morning"
-                    
+                    document.getElementById("dialog").innerText = ms[2] + "Good Morning"
+
                 } else if (currentHour >= 12 && currentHour < 18) {
-                document.getElementById("dialog").innerText = ms[2]+"Good Afternoon"
-                     
+                    document.getElementById("dialog").innerText = ms[2] + "Good Afternoon"
+
 
                 } else if (currentHour >= 18 && currentHour < 23) {
-                    
-                document.getElementById("dialog").innerText = ms[2]+"Good Evening"
+
+                    document.getElementById("dialog").innerText = ms[2] + "Good Evening"
 
                 }
-            }else{
+            } else {
                 document.getElementById("dialog").innerText = ms[3]
 
             }
@@ -413,12 +476,13 @@
 
         } else {
             document.getElementById("img").setAttribute("src", "sleeping.png")
-            document.getElementById("dialog").innerText ="---"
+            document.getElementById("dialog").innerText = "---"
 
         }
 
     </script>
     <script src="land.js"></script>
+
 </body>
 
 </html>
